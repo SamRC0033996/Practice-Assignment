@@ -29,11 +29,19 @@ namespace Practice_Assignemnt
 
         private void Calculate_Click(object sender, EventArgs e)
         {
-            double width, height, area;
-            width = Convert.ToDouble(textBox1.Text);
-            height = Convert.ToDouble(textBox2.Text);
-            area = width * height;
-            lblArea.Text = "Area = " + area;
+            //Calculate the area of a rectangle
+            try
+            {
+                double width, height, area;
+                width = Convert.ToDouble(textBox1.Text);
+                height = Convert.ToDouble(textBox2.Text);
+                area = width * height;
+                lblArea.Text = "Area = " + area;
+            }
+            catch
+            {
+                MessageBox.Show("Type in two numbers.");
+            }
         }
     }
 }
